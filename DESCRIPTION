@@ -1,0 +1,10 @@
+Package: RaaS
+Type: Package
+Title: R as a Shell
+Version: 0.1
+Date: 2015-01-19
+Author: Kosei ABE
+Maintainer: Kosei ABE <mail@recyclebin.jp>
+Description: Makes the R interactive for use of a shell.
+License: BSD_3_clause + file LICENSE
+BugReports: https://github.com/kos59125/RaaS/issues
