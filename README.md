@@ -26,11 +26,15 @@ Desktop
 Documents
 ...
 > # Command with parameters
-> ls["-l", "Desktop"]
+> # The following command is same as "ls -l Desktop"
+> ls[-l, Desktop]
 drwx------+  4 user  group  0  1 1 00:00 .
 drwxr-xr-x+  4 user  group  0  1 1 00:00 ..
 ...
 ```
+
+Hint: if a parameter contains special characters (e.g. white-space),
+the parameter should be quoted by backticks.
 
 Limitations
 -----------

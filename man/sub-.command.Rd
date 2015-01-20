@@ -4,12 +4,16 @@
 \alias{[.command}
 \title{Use a command with commandline parameters.}
 \usage{
-\method{[}{command}(cmd, ..., input = NULL)
+\method{[}{command}(cmd, ..., as.character = FALSE, input = NULL)
 }
 \arguments{
 \item{cmd}{a command object}
 
-\item{...}{commandline parameters}
+\item{...}{commandline parameters.
+Quote by backticks if a parameter contains such a character
+that is handled specially by R (e.g. white-space)}
+
+\item{as.character}{set \code{TRUE} if the parameters are given as character vectors}
 
 \item{input}{input of command}
 }

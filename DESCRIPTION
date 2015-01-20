@@ -1,8 +1,8 @@
 Package: RaaS
 Type: Package
 Title: R as a Shell
-Version: 0.1
-Date: 2015-01-19
+Version: 0.2
+Date: 2015-01-21
 Author: Kosei ABE
 Maintainer: Kosei ABE <mail@recyclebin.jp>
 Description: Makes the R interactive for use of a shell.

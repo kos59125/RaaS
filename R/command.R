@@ -15,14 +15,23 @@ print.dev.null <- function(...) {}
 #' @param cmd
 #'    a command object
 #' @param ...
-#'    commandline parameters
+#'    commandline parameters.
+#'    Quote by backticks if a parameter contains such a character
+#'    that is handled specially by R (e.g. white-space)
+#' @param as.character
+#'    set \code{TRUE} if the parameters are given as character vectors
 #' @param input
 #'    input of command
 #' @return
 #'    result of the command
 #' @export
-`[.command` <- function(cmd, ..., input=NULL) {
-   args <- sapply(list(...), shQuote)
+`[.command` <- function(cmd, ..., as.character=FALSE, input=NULL) {
+   if (as.character) {
+      args <- list(...)
+   } else {
+      args <- sapply(substitute(list(...))[-1L], deparse, backtick=FALSE)
+   }
+   args <- sapply(args, shQuote)
    cmd <- paste(c(cmd, args), collapse=" ")
    result <- system(cmd, input=input)
    class(result) <- "dev.null"
