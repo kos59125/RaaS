@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kos59125/RaaS.svg?branch=master)](https://travis-ci.org/kos59125/RaaS)
+
 RaaS
 ====
 
